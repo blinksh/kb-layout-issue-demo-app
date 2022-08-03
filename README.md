@@ -18,7 +18,7 @@ Posible solution: Add `UIScreenKeyboardFrameEndUserInfoKey`
 
 ## UIKeyboardLayoutGuide
 
-We suspect that TrackingLayoutGuide for keyboard also uses UIKeyboardDidChangeFrameNotification and it is also affected by this issue.
+We suspect that TrackingLayoutGuide for keyboard also uses `UIKeyboardDidChangeFrameNotification` and it is also affected by this issue.
 
 On following screenshot is example of this app. 2 and 3 windows are separate window scenes. Red view is constrained with `UIKeyboardLayoutGuide`.
 
