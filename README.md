@@ -23,3 +23,13 @@ We suspect that TrackingLayoutGuide for keyboard also uses `UIKeyboardDidChangeF
 On following screenshot is example of this app. 2 and 3 windows are separate window scenes. Red view is constrained with `UIKeyboardLayoutGuide`.
 
 <img src="screenshot.jpeg" alt="screenshot" maxWidth="100%"/>
+
+```objc
+[[_kbTrackerView.leadingAnchor constraintEqualToAnchor:self.view.keyboardLayoutGuide.leadingAnchor] setActive:YES];
+[[_kbTrackerView.widthAnchor constraintEqualToAnchor: self.view.keyboardLayoutGuide.widthAnchor] setActive:YES];
+[[_kbTrackerView.heightAnchor constraintEqualToAnchor: self.view.keyboardLayoutGuide.heightAnchor] setActive:YES];
+[[_kbTrackerView.bottomAnchor constraintEqualToAnchor:self.view.keyboardLayoutGuide.bottomAnchor] setActive:YES];
+self.view.keyboardLayoutGuide.followsUndockedKeyboard = YES;
+```
+
+And layout system also confuses between windows and apply wrong constrains to `_kbTrackerView` (red view).
