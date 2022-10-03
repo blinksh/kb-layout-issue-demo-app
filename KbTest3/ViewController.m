@@ -32,6 +32,7 @@
   
   
   _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+  _textView.font = [UIFont boldSystemFontOfSize:30];
   [self.view addSubview:_textView];
   
   NSNotificationCenter *nc =  NSNotificationCenter.defaultCenter;
